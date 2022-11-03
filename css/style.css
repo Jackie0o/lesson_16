@@ -1,0 +1,443 @@
+/* ====================== Connect the Lato font from Google fonts ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+/* ====================== CCS Properties Home Work=============================== */
+html,
+body {
+	scroll-behavior: smooth;
+}
+body {
+	/* Default value */
+	font-family: "Lato", sans-serif;
+	color: #424551;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+/* Confining container */
+[class*="__container"] {
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/* ======================HEADER====================== */
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 20px 0;
+	background: transparent;
+	z-index: 100;
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+.header__logo {
+	flex: 0 0 130px;
+}
+.header__logo img {
+	max-width: 100%;
+}
+.header__menu {
+	flex: 1 1 auto;
+}
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap:40px;
+	row-gap: 12px;
+}
+.menu__item {
+	position: relative;
+}
+.menu__item::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	border: 1px solid #F75E05;
+	/* #F75E05 */
+	/* #FF3F3A */
+	left: 0;
+	bottom: -5px;
+	opacity: 0;
+	visibility: hidden;
+	transform: scalex(0);
+	transition: all 0.4s ease 0s;
+}
+.menu__item:hover::after {
+	opacity: 100%;
+	visibility: visible;
+	transform: scalex(1);
+}
+.menu__link {
+	font-weight: 700;
+}
+.actions-header {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 36px;
+	flex-wrap: wrap;
+	font-weight: 700;
+}
+.actions-header__auth {
+	display: flex;
+	gap: 8px;
+}
+.actions-header__log-in {
+	position: relative;
+	padding-left: 24px;
+}
+.actions-header__log-in::before {
+	content: "";
+	position: absolute;
+	background: url('../img/icons/user.svg') left no-repeat;
+	font-weight: 700;
+	line-height: 1.25;
+	top: 0;
+	left: 0;
+	width: 17px;
+	height: 18px;
+	transition: all 0.4s ease 0s;
+}
+.actions-header__log-in::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	border: 1px solid #F75E05;
+	/* #F75E05 */
+	/* #FF3F3A */
+	left: 0;
+	bottom: -5px;
+	opacity: 0;
+	visibility: hidden;
+	transform: scalex(0);
+	transition: all 0.4s ease 0s;
+}
+.actions-header__log-in:hover::after {
+	opacity: 100%;
+	visibility: visible;
+	transform: scalex(1);
+}
+.actions-header__log-in:hover::before {
+	transform: scale(1.1) translateY(-5px);
+}
+.actions-header__reg {
+	position: relative;
+	padding-left: 15px;
+}
+.actions-header__reg::after {
+	content: "";
+	position: absolute;
+	width: 80%;
+	border: 1px solid #F75E05;
+	/* #F75E05 */
+	/* #FF3F3A */
+	right: 0;
+	bottom: -5px;
+	opacity: 0;
+	visibility: hidden;
+	transform: scalex(0);
+	transition: all 0.4s ease 0s;
+}
+.actions-header__reg:hover::after {
+	opacity: 100%;
+	visibility: visible;
+	transform: scalex(1);
+}
+.actions-header__reg::before {
+	content: "/";
+	position: absolute;
+	font-weight: 700;
+	line-height: 1.25;
+	top: -2px;
+	left: 0;
+	transition: all 0.4s ease 0s;
+}
+.actions-header__reg:hover::before {
+	transform: scale(1.1) translateX(70px) rotate(520deg);
+	color: #F75E05;
+	font-weight: 900;
+}
+/* ======================MAIN====================== */
+main {
+	flex: 1 1 auto;
+}
+.practice-block {
+	padding: 100px 0 25px;
+}
+.questions-block {
+	padding: 180px 0;
+}
+.practice-block__title {
+	text-align: center;
+}
+.practice-block__title:not(:last-child){
+	margin: 0 0 15px 0;
+}
+.practice-block__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+.form-practice__item {
+	flex: 0 1 auto;
+	width: 50%;
+}
+.form-practice__item:last-child {
+	display: flex;
+	gap: 10px;
+}
+.form-practice__button {
+	flex: 1 1 25%;
+}
+.form-practice__input {
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	padding: 13px 16px;
+	line-height: 24px;
+	width: 100%;
+	height: 50px;
+}
+
+.questions-block__container {
+	display: flex;
+}
+.questions-block__img {
+	flex: 1 1 35%;
+	transform: translateX(-15px);
+	align-self: center;
+}
+.questions-block__img img {
+	max-width: 100%;
+}
+.questions-block__content {
+	flex: 1 1 65%;
+	padding: 0 0 0 105px;
+}
+.title-block__sub-title {
+	font-weight: 700;
+	line-height: 24px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #1E212C;
+}
+.title-block__title {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 60px;
+	color: #1E212C;
+}
+.questions-block__form:not(:last-child),
+.questions-block__title:not(:last-child) {
+	margin: 0 0 40px 0;
+}
+.form-block__user-info:not(:last-child) {
+	margin: 0 0 24px 0;
+}
+.info-user__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 24px;
+	margin: 0 -12px;
+}
+.info-user__item {
+	flex: 1 1 50%;
+	padding: 0 12px;
+}
+.form-practice__label,
+.info-user__label {
+	line-height: 160%;
+	display: inline-block;
+}
+.form-practice__label:not(:last-child),
+.title-block__title:not(:last-child),
+.title-block__sub-title:not(:last-child),
+.textarea-block__label:not(:last-child),
+.info-user__input:not(:last-child),
+.info-user__label:not(:last-child) {
+	margin: 0 0 8px 0;
+}
+.info-user__input {
+	display: block;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	width: 100%;
+	padding: 13px 16px;
+	line-height: 24px;
+}
+.form-block__textarea:not(:last-child) {
+	margin: 0 0 48px 0;
+}
+.form-block__textarea textarea{
+	width: 100%;
+	padding: 13px 16px;
+	height: 128px;
+	resize: none;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+}
+.textarea-block__label {
+	line-height: 160%;
+	display: inline-block;
+}
+.form-block__radio,
+.form-block__agree:not(:last-child) {
+	margin: 0 0 40px 0;
+}
+.agree-block {
+	display: flex;
+	gap: 50px;
+}
+.agree-block__line {
+	flex: 0 1 48%;
+	position: relative;
+}
+.agree-block__button {
+	flex: 1 1 52%;
+	align-self: flex-start;
+}
+.radio__input,
+.agree-block__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.agree-block__label {
+	display: inline-block;
+	line-height: 160%;
+	padding: 0 0 0 28px;
+	position: relative;
+}
+.agree-block__label::before {
+	content: "";
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	top: 5px;
+	left: 0;
+	background: #FF3F3A;
+	border: 1px solid #FF3F3A;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.agree-block__input:checked + .agree-block__label::before {
+	background:  #c10600 url(../img/icons/check.svg) 1px 2px / 90% no-repeat;
+}
+.agree-block__input:focus + .agree-block__label::before {
+	outline: 1px solid #000;
+}
+.form-block__radio {
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	padding: 13px 16px;
+	row-gap: 10px;
+}
+.radio__item {
+	flex: 0 0 33.3333%;
+	display: flex;
+	align-items: center;
+}
+.radio__label {
+	display: inline-block;
+	line-height: 160%;
+	padding: 0 0 0 28px;
+	position: relative;
+}
+.radio__label::before {
+	content: "";
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	top: 4px;
+	left: 0;
+	border: 1px solid #FF3F3A;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.radio__label::after {
+	content: "";
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	height: 10px;
+	width: 10px;
+	top: 8px;
+	left: 4px;
+	background:  #FF3F3A;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.radio__input:checked + .radio__label::after {
+	opacity: 1;
+	visibility: visible;
+	background:  #FF3F3A;
+}
+.radio__input:focus + .radio__label::before {
+	outline: 1px solid #000;
+}
+
+/* ======================FOOTER====================== */
+.footer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0;
+	gap: 15px;
+	background: linear-gradient(
+		to right,
+		#072142 0%,
+		#8c2b7a 25%,
+		#ff4d5a 50%,
+		#ff4d5a 65%,
+		#8c2b7a 80%,
+		#072142 100%);
+	background-size: 300%;
+	background-position: left;
+	color: #fff;
+	transition: all 1.5s ease 0s;
+}
+.footer:hover {
+	background-position: right;
+}
+.footer__title {
+	font-size: 25px;
+	position: relative;
+	z-index: 2;
+}
+.footer__link {
+	flex: 0 1 55px;
+}
+.footer__link img{
+	max-width: 100%;
+	position: relative;
+	z-index: 2;
+}
+.footer__wave {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+.footer__wave svg {
+	position: relative;
+	display: block;
+	width: calc(130% + 1.3px);
+	height: 39px;
+}
+.footer__wave .footer__fill {
+	fill: #FFFFFF;
+}
