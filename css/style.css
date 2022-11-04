@@ -249,7 +249,7 @@ main {
 	margin: 0 -12px;
 }
 .info-user__item {
-	flex: 1 1 50%;
+	flex: 0 1 50%;
 	padding: 0 12px;
 }
 .form-practice__label,
