@@ -316,6 +316,7 @@ main {
 	line-height: 160%;
 	padding: 0 0 0 28px;
 	position: relative;
+	cursor: pointer;
 }
 .agree-block__label::before {
 	content: "";
@@ -327,7 +328,6 @@ main {
 	background: #FF3F3A;
 	border: 1px solid #FF3F3A;
 	border-radius: 3px;
-	cursor: pointer;
 }
 .agree-block__input:checked + .agree-block__label::before {
 	background:  #c10600 url(../img/icons/check.svg) 1px 2px / 90% no-repeat;
@@ -353,6 +353,7 @@ main {
 	line-height: 160%;
 	padding: 0 0 0 28px;
 	position: relative;
+	cursor: pointer;
 }
 .radio__label::before {
 	content: "";
@@ -363,7 +364,6 @@ main {
 	left: 0;
 	border: 1px solid #FF3F3A;
 	border-radius: 50%;
-	cursor: pointer;
 }
 .radio__label::after {
 	content: "";
